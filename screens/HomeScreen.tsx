@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
 
 import { getShoes } from '../api';
+import Layout from '../components/Layout';
 import ShoesList from '../components/ShoeList';
 
 const HomeScreen = () => {
@@ -18,9 +18,9 @@ const HomeScreen = () => {
     }, []);
 
     return (
-        <View>
+        <Layout>
             <ShoesList shoes={shoes} />
-        </View>
+        </Layout>
     );
 };
 

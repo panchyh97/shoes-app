@@ -1,19 +1,18 @@
 import React from 'react';
-import { 
-    Button, 
-    Alert, 
-    View 
-} from 'react-native';
+import { Button, Alert } from 'react-native';
+import Layout from '../components/Layout';
 
 const ButtonScreen = () => {
+
+    const message: string = "Muy buen día :)"
+
     return (
-        <View>
+        <Layout>
             <Button
-                title="Hola mundo, soy un botón"
-                onPress= {() => Alert.alert('Soy un mensaje')}
-                color= 'black'
+                title="Mostrar mensaje"
+                onPress= {() => Alert.alert(message)}
             />
-        </View>
+        </Layout>
     );
 };
 

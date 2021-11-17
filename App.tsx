@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import HomeScreen from './screens/HomeScreen';
 import ButtonScreen from './screens/ButtonScreen';
 
@@ -11,12 +13,18 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="HomeScreen"
+          name="Listado de zapatos"
           component={HomeScreen}
+          options={{
+            tabBarIcon: () => (<MaterialCommunityIcons name='home' />)
+          }}
         />
         <Tab.Screen
-          name="ButtonScreen"
+          name="Botón"
           component={ButtonScreen}
+          options={{
+            tabBarIcon: () => (<MaterialCommunityIcons name='android-messages' />)
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>
